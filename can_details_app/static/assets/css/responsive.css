@@ -1,0 +1,82 @@
+@media only screen and (max-width: 1199px) {
+    .frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item {
+        width: calc((100% - 18px) / 2);
+    }
+
+    .frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area {
+        row-gap: 16px;
+    }
+
+    .frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel {
+        width: 240px;
+    }
+
+    .frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel .frc_brand_block {
+        width: 239px;
+    }
+
+    .frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area {
+        width: calc(100% - 240px);
+        left: 240px;
+    }
+
+    .frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar {
+        width: calc(100% - 240px);
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area {
+        width: 100%;
+        left: 0;
+    }
+
+    .frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 991px) {
+    .frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner {
+        flex-wrap: wrap;
+        row-gap: 16px;
+    }
+
+    .frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block {
+        padding: 88px 24px 500px;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 728px) {
+    .frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block {
+        padding: 150px 20px 50px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item {
+        padding: 42px 14px 16px 14px;
+    }
+}
+
+
+@media only screen and (max-width: 420px) {}
+
+@media only screen and (max-width: 395px) {}
+
+@media only screen and (max-width: 360px) {}
+
+@media only screen and (max-width: 320px) {}

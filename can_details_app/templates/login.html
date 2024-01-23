@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title> Webapp | Login </title>
+</head>
+
+<body>
+
+    <section class="login_block">
+        <div class="bg_layer">
+            <img src="{% static 'assets/img/login_bg.jpg' %}" alt="">
+        </div>
+        <div class="txt_layer">
+            <div class="logo_block">
+                <img src="{% static 'assets/img/dummy_img.jpg' %}" alt="">
+                <h1>Webapp Dashboard</h1>
+            </div>
+            <div class="login_form">
+                <h2>Login</h2>
+                <form action = "{% url 'login' %}" method="post">
+                    {% csrf_token %}
+                    <div class="field_grp">
+                        <label for="username">User ID</label>
+                        <input type="text" name = "username"placeholder="Enter your email address">
+                    </div>
+                    <div class="field_grp">
+                        <label for="">Password</label>
+                        <div class="input-group">
+                            <input name = "password" type="password" placeholder="Enter Password" class="password_field">
+                            <span class="show_pass"><img src="{% static 'assets/img/eye_off.svg' %}" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="field_check">
+                        <input type="checkbox">
+                        <label for="">Remember me</label>
+                    </div>
+                    <div class="submit_btn">
+                        <input type="submit" value="Submit"> 
+
+                        
+                        {% comment %} <a href= "{% url 'home' %}"> {% endcomment %}
+                        <a href="">Forgot Password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+
+</body>
+
+</html>

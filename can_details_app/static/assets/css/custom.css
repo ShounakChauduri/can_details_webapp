@@ -1,0 +1,1988 @@
+body {
+    font-family: 'Inter', sans-serif;
+    transition: 0.3s all
+}
+
+::placeholder {
+    color: #abafb1;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal
+}
+
+:root {
+    --frc_primary: #7b17ff;
+}
+
+a {
+    text-decoration: none
+}
+
+::-webkit-scrollbar {
+    width: 1px
+}
+
+::-webkit-scrollbar-track {
+    background: #000000
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--frc_primary)
+}
+
+.login_block {
+    position: relative;
+    min-height: 100vh
+}
+
+.login_block .bg_layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+.login_block .bg_layer img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.login_block .txt_layer {
+    position: relative;
+    height: 100vh;
+    padding: 80px 16px;
+    overflow-x: hidden;
+}
+
+.login_block .txt_layer .logo_block {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.login_block .txt_layer .logo_block img {
+    width: 56px
+}
+
+.login_block .txt_layer .logo_block h1 {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    margin-left: 23px
+}
+
+.login_block .txt_layer .login_form {
+    width: 100%;
+    max-width: 520px;
+    margin: 30px auto 0;
+    border-radius: 16px;
+    background: #fff;
+    padding: 42px
+}
+
+.login_block .txt_layer .login_form h2 {
+    color: #2B2F32;
+    font-size: 24px;
+    margin-bottom: 11px;
+    line-height: normal
+}
+
+.login_block .txt_layer .login_form p {
+    color: #2B2F32;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px
+}
+
+.login_block .txt_layer .login_form p a {
+    color: var(--frc_primary);
+    font-weight: 500
+}
+
+.login_block .txt_layer .login_form form {
+    margin-top: 30px
+}
+
+.login_block .txt_layer .login_form form .field_grp {
+    border-radius: 8px;
+    padding: 8px 16px;
+    background: rgba(239, 241, 249, 0.6);
+    margin-bottom: 20px;
+    width: 100%
+}
+
+.login_block .txt_layer .login_form form .field_grp label {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    color: #5e6366
+}
+
+.login_block .txt_layer .login_form form .field_grp input {
+    width: 100%;
+    border: 0;
+    background: transparent
+}
+
+.login_block .txt_layer .login_form form .field_grp input:focus-visible {
+    outline: none
+}
+
+.login_block .txt_layer .login_form form .field_grp .input-group {
+    flex-wrap: nowrap
+}
+
+.login_block .txt_layer .login_form form .field_grp .input-group .show_pass {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    margin-top: -8px
+}
+
+.login_block .txt_layer .login_form form .submit_btn input[type=submit] {
+    width: 100%;
+    display: block;
+    margin: 0 auto 20px;
+    background: var(--frc_primary);
+    color: #fff;
+    font-size: 20px;
+    line-height: normal;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid var(--frc_primary);
+    transition: 0.3s all
+}
+
+.login_block .txt_layer .login_form form .submit_btn input[type=submit]:hover {
+    background: #fff;
+    color: var(--frc_primary)
+}
+
+.login_block .txt_layer .login_form form .submit_btn a {
+    color: var(--frc_primary);
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    text-align: center
+}
+
+.login_block .txt_layer .login_form form .field_check {
+    margin: 0 0 26px 0
+}
+
+.field_check {
+    position: relative;
+    display: inline-block
+}
+
+.field_check input[type=checkbox] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1
+}
+
+.field_check input[type=checkbox]:checked+label::before {
+    background: var(--frc_primary);
+    border: 1px solid transparent
+}
+
+.field_check input[type=checkbox]:checked+label::after {
+    opacity: 1
+}
+
+.field_check label {
+    padding-left: 47px;
+    color: #83898c;
+    font-size: 14px;
+    line-height: normal;
+    position: relative
+}
+
+.field_check label::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    border: 1px solid #CFD3D4;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s all
+}
+
+.field_check label::after {
+    content: '';
+    width: 16px;
+    height: 8px;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-right: 0;
+    position: absolute;
+    left: 4px;
+    top: 40%;
+    transform: translateY(-50%) rotate(-45deg);
+    transition: 0.3s all;
+    opacity: 0
+}
+
+.frc_dashboard_wrapper {
+    background: #DADADF;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner {
+    position: relative;
+    height: 100%
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel {
+    width: 250px;
+    background: var(--frc_primary);
+    position: fixed;
+    position: -webkit-sticky;
+    top: 0;
+    left: 0;
+    height: fit-content;
+    min-height: 100vh;
+    flex: 0 0 auto;
+    transition: 0.5s all;
+    overflow: auto;
+    z-index: 3;
+    box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel .frc_brand_block {
+    position: fixed;
+    top: 0;
+    padding: 16px 20px;
+    background: var(--frc_primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s all;
+    z-index: 1;
+    width: 250px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel .frc_brand_block span.sidebar_show {
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50%;
+    background: #4d03c3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    cursor: pointer;
+    z-index: 9
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel .frc_brand_block span.sidebar_show i {
+    color: #fff;
+    font-size: 10px;
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel .frc_brand_block a.brand_link img {
+    width: 32px;
+    transition: 0.3s all;
+    /* border: 1px solid var(--frc_primary);
+    border-radius: 50px; */
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel .frc_brand_block .menu_trigger {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #4d03c3;
+    cursor: pointer
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel .frc_brand_block .menu_trigger i {
+    color: #fff;
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel .frc_sidebar_menu_list {
+    list-style-type: none;
+    padding: 0;
+    margin: 72px 0 17px;
+    position: absolute;
+    width: 100%
+}
+
+
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel .frc_sidebar_menu_list li:last-child {
+    margin-bottom: 0
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel .frc_sidebar_menu_list li a {
+    display: flex;
+    padding: 8px 20px;
+    align-items: center;
+    transition: 0.3s all;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel .frc_sidebar_menu_list li a span {
+    margin-left: 16px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    transition: 0.3s all;
+    text-transform: capitalize
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel .frc_sidebar_menu_list li a svg path {
+    transition: 0.3s all;
+    fill: #fff;
+}
+
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel .frc_sidebar_menu_list li a:hover {
+    background: #fff;
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel .frc_sidebar_menu_list li a.active_menu {
+    background: #4d03c3;
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel .frc_sidebar_menu_list li a:hover svg path {
+    fill: var(--frc_primary);
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel .frc_sidebar_menu_list li a:hover span {
+    color: var(--frc_primary);
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel .frc_sidebar_menu_list li a.active_menu span {
+    color: #fff;
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .side_panel .frc_sidebar_menu_list li a.active_menu svg path {
+    fill: #fff;
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area {
+    width: calc(100% - 250px);
+    left: 250px;
+    transition: 0.5s all;
+    position: relative;
+    height: 100%
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper {
+    position: relative;
+    height: 100%
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 250px);
+    padding: 11px 24px;
+    background: #fff;
+    transition: 0.5s all;
+    right: 0;
+    z-index: 2
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .left_side .page_caption_info h1 {
+    color: #2B2F32;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+    text-transform: capitalize
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .left_side .page_caption_info .frc_breadcrumb {
+    display: flex;
+    align-items: center;
+    color: #5e6366
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .left_side .page_caption_info .frc_breadcrumb a {
+    margin-right: 10px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .left_side .page_caption_info .frc_breadcrumb a svg {
+    margin-top: -2px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .left_side .page_caption_info .frc_breadcrumb a svg path {
+    transition: 0.3s all
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .left_side .page_caption_info .frc_breadcrumb a:hover svg path {
+    stroke: var(--frc_primary)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .left_side .page_caption_info .frc_breadcrumb span.pagename {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #5e6366;
+    margin: 2px 0 0 10px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side {
+    display: flex;
+    align-items: center
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side .search_field {
+    display: flex;
+    border: 1px solid #CFD3D4;
+    padding: 8px 16px;
+    align-items: center;
+    border-radius: 8px;
+    margin-right: 20px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side .search_field input {
+    border: 0;
+    background: transparent
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side .search_field input:focus-visible {
+    outline: 0
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side .notification_btn_block {
+    margin-right: 16px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side .notification_btn_block a.trigger_btn {
+    border-radius: 50%;
+    background: #EDF0F3;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side .notification_btn_block a.pending_notification::after {
+    content: attr(data-count);
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--frc_primary);
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 24px;
+    color: #fff
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side .notification_btn_block a.many_notifications::after {
+    content: '99+';
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--frc_primary);
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 24px;
+    color: #fff
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side .user_details {
+    display: flex;
+    align-items: center
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side .user_details .user_avatar {
+    width: 40px;
+    height: 40px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side .user_details .user_avatar img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side .user_details .user_name_info {
+    padding-left: 8px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side .user_details .user_name_info span.u_name {
+    display: block;
+    font-size: 14px;
+    line-height: 22px;
+    color: #231f20;
+    text-transform: capitalize
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side .user_details .user_name_info .user_type_dropdown {
+    position: relative
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side .user_details .user_name_info .user_type_dropdown .selected_user_type {
+    position: relative;
+    display: flex;
+    background-color: #EDF0F3;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 8px;
+    font-size: 10px;
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side .user_details .user_name_info .user_type_dropdown .user_dropdown_list {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 150px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(0);
+    transform-origin: top right;
+    transition: 0.3s all
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side .user_details .user_name_info .user_type_dropdown .user_dropdown_list a {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 17px;
+    color: #231f20;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: 0.3s all
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side .user_details .user_name_info .user_type_dropdown.list_show .selected_user_type::after {
+    transform: rotate(-180deg)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_topbar .topbar_inner .right_side .user_details .user_name_info .user_type_dropdown.list_show .user_dropdown_list {
+    transform: scale(1);
+    z-index: 1
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block {
+    padding: 88px 24px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_block_card {
+    padding: 16px 20px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    height: 100%
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_block_card:last-child {
+    margin-bottom: 0
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 16px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_category {
+    display: flex;
+    align-items: center
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_category .category_item {
+    position: relative;
+    margin-right: 32px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_category .category_item:last-child {
+    margin-right: 0
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_category .category_item input[type=radio] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_category .category_item input[type=radio]:checked+label span {
+    color: var(--frc_primary)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_category .category_item input[type=radio]:checked+label svg path {
+    fill: var(--frc_primary)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_category .category_item label {
+    margin: 0;
+    display: flex;
+    align-items: center
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_category .category_item label svg path {
+    transition: 0.3s all
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_category .category_item label span {
+    margin-left: 8px;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #2b2f32;
+    transition: 0.3s all
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort {
+    display: flex;
+    align-items: center
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort .sort_dropdown {
+    width: 214px;
+    position: relative;
+    margin-right: 16px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort .sort_dropdown .selected_opt {
+    display: block;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #2b2f32;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #CFD3D4;
+    cursor: pointer;
+    position: relative
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort .sort_dropdown .selected_opt::after {
+    content: '';
+    height: 100%;
+    width: 32px;
+    background: url(../../assets/img/chevron_down.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: 0.3s all;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort .sort_dropdown ul.sort_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 105%;
+    width: 100%;
+    left: 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s all;
+    transform: scale(0);
+    transform-origin: top;
+    opacity: 0;
+    z-index: 1
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort .sort_dropdown ul.sort_list li {
+    text-align: center;
+    padding: 8px 16px;
+    cursor: pointer
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort .sort_dropdown.sort_list_show ul.sort_list {
+    transform: scale(1);
+    opacity: 1
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort .sort_dropdown.sort_list_show .selected_opt:after {
+    transform: rotate(180deg)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort .date_field {
+    width: 214px;
+    border-radius: 8px;
+    border: 1px solid #CFD3D4;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin-right: 16px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort .date_field .selected_date {
+    padding: 8px 16px;
+    font-size: 16px;
+    line-height: normal;
+    color: #abafb1;
+    display: block;
+    position: relative
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort .date_field .selected_date::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    content: '';
+    width: 32px;
+    background: url(../../assets/img/calendar_icon.svg);
+    background-repeat: no-repeat;
+    background-position: center center
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort .date_field input[type=date] {
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort .date_field input[type=date]:focus-visible {
+    outline: 0
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort .add_new_btn_block a.add_new_btn {
+    background: var(--frc_primary);
+    border: 1px solid var(--frc_primary);
+    border-radius: 12px;
+    display: flex;
+    transition: 0.3s all;
+    align-items: center;
+    padding: 7px 16px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort .add_new_btn_block a.add_new_btn svg path {
+    transition: 0.3s all
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort .add_new_btn_block a.add_new_btn span {
+    font-size: 16px;
+    line-height: normal;
+    color: #fff;
+    text-transform: capitalize;
+    transition: 0.3s all;
+    display: block;
+    margin-left: 8px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort .add_new_btn_block a.add_new_btn:hover {
+    background: transparent
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort .add_new_btn_block a.add_new_btn:hover span {
+    color: var(--frc_primary)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .filter_area .filter_sort .add_new_btn_block a.add_new_btn:hover svg path {
+    stroke: var(--frc_primary)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item {
+    flex: 0 0 auto;
+    width: calc((100% - 36px) / 3);
+    padding: 16px 14px;
+    border-radius: 8px;
+    position: relative
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item span.customer_status {
+    position: absolute;
+    right: 14px;
+    top: 16px;
+    padding: 4px 6px;
+    color: #FFF;
+    font-size: 12px;
+    border-radius: 4px;
+    line-height: normal;
+    text-transform: capitalize
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item .info_block {
+    position: relative
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item .info_block .user_name_avatar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item .info_block .user_name_avatar .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item .info_block .user_name_avatar .avatar span {
+    display: block;
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item .info_block .user_name_avatar .u_name {
+    padding-left: 10px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item .info_block .user_name_avatar .u_name span.name {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    color: #000
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item .info_block .user_name_avatar .u_name span.alias {
+    display: block;
+    font-size: 12px;
+    line-height: normal;
+    color: #5e6366
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item .info_block .user_info span {
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    color: #5e6366
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item.suspended_customer {
+    background: #F2ECD8
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item.suspended_customer span.customer_status {
+    background: var(--frc_primary)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item.inactive_customer {
+    background: #EDF0F3
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item.inactive_customer span.customer_status {
+    background: #83898C
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item.active_customer {
+    background: #E6F6EE
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .customer_list_block .inner_row .customer_list_item.active_customer span.customer_status {
+    background: #32936F
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list {
+    counter-reset: prod-index
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item {
+    padding: 19px 14px;
+    border-radius: 8px;
+    background: #EDF0F3;
+    margin-bottom: 10px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item:last-child {
+    margin-bottom: 0
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 10px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .prod_name_id {
+    display: flex;
+    align-items: center
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .prod_name_id span.index {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: #fff;
+    position: relative
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .prod_name_id span.index::before {
+    content: counter(prod-index);
+    counter-increment: prod-index;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .prod_name_id .info {
+    padding-left: 10px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .prod_name_id .info span {
+    display: block
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .prod_name_id .info span.name {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    color: #000
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .prod_name_id .info span.prod_id {
+    color: #5E6366;
+    font-size: 12px;
+    line-height: normal
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .short_detalis_action_status {
+    display: flex;
+    align-items: center
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .short_detalis_action_status .short_info {
+    display: flex;
+    align-items: center
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .short_detalis_action_status .short_info .info_item {
+    margin-right: 100px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .short_detalis_action_status .short_info .info_item span {
+    display: block
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .short_detalis_action_status .short_info .info_item span.capt {
+    color: #83898C;
+    font-size: 12px;
+    line-height: normal;
+    text-transform: capitalize
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .short_detalis_action_status .short_info .info_item span.item_data {
+    color: #2B2F32;
+    font-size: 14px;
+    line-height: normal
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .short_detalis_action_status .prod_status {
+    color: #FFF;
+    font-size: 12px;
+    line-height: normal;
+    padding: 4px 6px;
+    border-radius: 4px;
+    background: #83898C;
+    text-transform: capitalize;
+    margin-right: 16px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .short_detalis_action_status .action_block {
+    position: relative
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .short_detalis_action_status .action_block span.act_btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #fff
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .short_detalis_action_status .action_block .act_list_close {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: none
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .short_detalis_action_status .action_block .action_list {
+    position: absolute;
+    padding: 20px 16px;
+    top: 0;
+    right: 0;
+    border-radius: 8px;
+    border: 1px solid #CFD3D4;
+    background: #FFF;
+    box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.1);
+    width: 214px;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: 0.3s all;
+    z-index: 3;
+    opacity: 0
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .short_detalis_action_status .action_block .action_list a {
+    margin: 0 -16px;
+    display: block;
+    padding: 10px 16px;
+    font-size: 16px;
+    color: #2B2F32;
+    font-weight: 400;
+    line-height: normal;
+    transition: 0.3s all
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .short_detalis_action_status .action_block .action_list a:hover {
+    color: var(--frc_primary)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .short_detalis_action_status .action_block .action_list a:last-child {
+    margin-bottom: 0
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_info .short_detalis_action_status .action_block .act_list_show {
+    transform: scale(1);
+    opacity: 1
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_description {
+    margin-top: 11px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_description span.capt {
+    display: block;
+    color: #83898C;
+    font-size: 12px;
+    line-height: 24px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item .product_description p {
+    color: #2B2F32;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .product_list .product_item.active .prod_status {
+    background: #32936F !important
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block {
+    width: 100%;
+    max-width: 604px;
+    margin: 18px auto;
+    height: 100%;
+    padding-bottom: 32px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form {
+    height: 100%
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block .step_form_inner {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    justify-content: space-between
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block h3.form_caption {
+    font-size: 24px;
+    line-height: normal;
+    text-align: center;
+    color: #2B2F32;
+    text-transform: capitalize
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form {
+    margin-top: 24px;
+    min-height: calc(100vh - 300px)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_row {
+    display: flex;
+    align-items: center;
+    column-gap: 16px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_row .form_col_50 {
+    flex: 0 0 auto;
+    width: calc((100% - 16px) / 2)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_input {
+    border-radius: 8px;
+    background: rgba(239, 241, 249, 0.6);
+    margin-bottom: 16px;
+    padding: 8px 16px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_input label {
+    display: block;
+    font-size: 12px;
+    line-height: normal;
+    color: #5e6366;
+    text-transform: capitalize
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_input input,
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_input textarea {
+    width: 100%;
+    border: 0;
+    background: transparent
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_input input:focus-visible,
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_input textarea:focus-visible {
+    outline: 0
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .select_group {
+    border-radius: 8px;
+    background: rgba(239, 241, 249, 0.6);
+    margin-bottom: 16px;
+    padding: 10px 16px;
+    width: 100%;
+    cursor: pointer
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .select_group label {
+    display: block;
+    font-size: 12px;
+    line-height: normal;
+    color: #5e6366;
+    text-transform: capitalize
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .select_group .form_field_select {
+    position: relative;
+    cursor: pointer
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .select_group .form_field_select span.selected_option {
+    font-size: 16px;
+    font-style: normal;
+    text-transform: capitalize;
+    color: #5E6366;
+    position: relative;
+    display: block
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .select_group .form_field_select span.selected_option::after {
+    content: '';
+    position: absolute;
+    right: -14px;
+    top: -8px;
+    height: 100%;
+    width: 30px;
+    background: url(../../assets/img/chevron_down.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: 0.3s all
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .select_group .form_field_select .select_dropdown {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: calc(100% + 16px);
+    background: #fff;
+    width: calc(100% + 32px);
+    left: -16px;
+    border-radius: 8px;
+    box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.1);
+    transition: 0.3s all;
+    transform: scale(0);
+    transform-origin: top center
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .select_group .form_field_select .select_dropdown li {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-style: normal;
+    text-transform: capitalize;
+    color: #5E6366;
+    cursor: pointer
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .select_group .form_field_select.select_show .select_dropdown {
+    transform: scale(1)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .select_group .form_field_select.select_show .selected_option::after {
+    transform: rotate(-180deg)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_phone {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_phone .country_dropdown {
+    position: relative;
+    width: 142px;
+    height: 58px;
+    border-radius: 8px;
+    background: rgba(239, 241, 249, 0.6)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_phone .country_dropdown #country,
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_phone .country_dropdown #country_2,
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_phone .country_dropdown .frc_country_select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    display: none
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_phone .country_dropdown .selected-flag {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -16px;
+    left: 0;
+    width: 142px;
+    height: 55px;
+    background-color: transparent !important;
+    padding: 8px 16px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_phone .country_dropdown .selected-flag::after {
+    content: attr(data-title);
+    left: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #abafb1;
+    font-size: 16px;
+    line-height: normal
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_phone .country_dropdown .selected-flag .arrow {
+    border: 0;
+    width: 20px;
+    height: 20px;
+    transition: 0.3s all;
+    background: url(../../assets/img/chevron_down.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-top: 0;
+    transform: translateY(-50%)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_phone .country_dropdown .selected-flag .arrow.up {
+    transform: translateY(-50%) rotate(-180deg)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_phone .country_dropdown .country-select .country-list {
+    top: 45px;
+    width: 142px;
+    border-radius: 8px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_phone .phone_input {
+    border-radius: 8px;
+    background: rgba(239, 241, 249, 0.6);
+    padding: 8px 16px;
+    width: calc(100% - 142px);
+    margin-left: 6px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_phone .phone_input label {
+    display: block;
+    font-size: 12px;
+    line-height: normal;
+    color: #5e6366;
+    text-transform: capitalize
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_phone .phone_input input {
+    width: 100%;
+    border: 0;
+    background: transparent
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .form_field_phone .phone_input input:focus-visible {
+    outline: 0
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .submit_block {
+    text-align: center;
+    margin-top: 32px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .submit_block input[type=submit] {
+    border: 0;
+    background: var(--frc_primary);
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    line-height: normal;
+    text-transform: capitalize;
+    padding: 16px;
+    border: 1px solid var(--frc_primary);
+    transition: 0.3s all;
+    border-radius: 12px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .submit_block input[type=submit]:hover {
+    background: transparent;
+    color: var(--frc_primary)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .submit_block .step_form_navigate_btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: center
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .submit_block .step_form_navigate_btn input[type=submit] {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #83898c;
+    border-radius: 12px;
+    border: 2px solid #CFD3D4;
+    transition: 0.3s all;
+    width: 100%;
+    max-width: 180px;
+    padding: 16px;
+    background: transparent
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .submit_block .step_form_navigate_btn input[type=submit]:hover {
+    background: #CFD3D4;
+    color: #fff
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .submit_block .step_form_navigate_btn input[type=submit].input_submit_btn {
+    border: 0;
+    background: var(--frc_primary);
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    line-height: normal;
+    text-transform: capitalize;
+    padding: 16px;
+    border: 1px solid var(--frc_primary);
+    transition: 0.3s all;
+    border-radius: 12px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .submit_block .step_form_navigate_btn input[type=submit].input_submit_btn:hover {
+    background: transparent;
+    color: var(--frc_primary)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .upload_btn_block {
+    width: 100%
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .upload_btn_block .upload_btn {
+    width: 100%;
+    height: 192px;
+    position: relative
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .upload_btn_block .upload_btn input[type=file] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .upload_btn_block .upload_btn .cstm_upload {
+    text-align: center;
+    border-radius: 8px;
+    border: 1px dashed #BD9E3E;
+    background: #FAF2DE;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .upload_btn_block .upload_btn .cstm_upload p {
+    font-size: 16px;
+    line-height: normal;
+    color: #2B2F32
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .upload_btn_block .upload_btn .cstm_upload p span.highlight {
+    color: var(--frc_primary)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .upload_btn_block .upload_btn .cstm_upload p span.img_opt {
+    display: block;
+    font-size: 12px;
+    line-height: normal;
+    color: #83898C;
+    margin-top: 8px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .upload_btn_block .uploaded_item {
+    margin-top: 16px;
+    border-radius: 8px;
+    background: #EDF0F3;
+    padding: 8px 10px;
+    position: relative;
+    display: none;
+    align-items: center
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .upload_btn_block .uploaded_item .icon_holder {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .upload_btn_block .uploaded_item .item_info {
+    padding-left: 16px;
+    width: calc(100% - 48px)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .upload_btn_block .uploaded_item .item_info span {
+    display: block
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .upload_btn_block .uploaded_item .item_info span.name {
+    font-size: 14px;
+    line-height: 22px;
+    color: #231f20;
+    text-transform: capitalize
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .upload_btn_block .uploaded_item .item_info span.size {
+    color: #83898C;
+    font-size: 12px;
+    line-height: 22px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .frc_form_block form .upload_btn_block .uploaded_item .remove_item {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .applicant_list_table .action_block {
+    position: relative
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .applicant_list_table .action_block span.act_btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #EDF0F3;
+    margin: 0 auto
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .applicant_list_table .action_block .act_list_close {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: none
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .applicant_list_table .action_block .action_list {
+    position: absolute;
+    padding: 20px 16px;
+    top: 0;
+    right: 0;
+    border-radius: 8px;
+    border: 1px solid #CFD3D4;
+    background: #FFF;
+    box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.1);
+    width: 214px;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: 0.3s all;
+    z-index: 4;
+    opacity: 0
+}
+
+.page-link {
+    padding: 4px 12px;
+}
+
+.page-item.active .page-link {
+    background: var(--frc_primary);
+    border-color: var(--frc_primary);
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .applicant_list_table .action_block .action_list a {
+    margin: 0 -16px;
+    display: block;
+    padding: 10px 16px;
+    font-size: 16px;
+    color: #2B2F32;
+    font-weight: 400;
+    line-height: normal;
+    transition: 0.3s all
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .applicant_list_table .action_block .action_list a:hover {
+    color: var(--frc_primary)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .applicant_list_table .action_block .action_list a:last-child {
+    margin-bottom: 0
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .applicant_list_table .action_block .act_list_show {
+    transform: scale(1);
+    opacity: 1
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .applicant_list_table .loan_status {
+    color: #FFF;
+    font-size: 12px;
+    line-height: normal;
+    padding: 4px 6px;
+    border-radius: 4px;
+    background: #83898C;
+    text-transform: capitalize;
+    margin-right: 16px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .applicant_list_table .loan_status.pending_status {
+    background: var(--frc_primary)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .applicant_list_table .loan_status.approved_status {
+    background: #32936F !important
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .applicant_list_table table thead tr th {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    color: #2b2f32;
+    border-bottom: 1px solid #CFD3D4
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .applicant_list_table table thead tr th:last-child {
+    text-align: center
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .applicant_list_table table tbody tr td {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: #5E6366;
+    vertical-align: middle;
+    border-bottom: 1px solid #CFD3D4
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block {
+    position: relative;
+    border-radius: 8px;
+    background: #FFF
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .inner_row {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .title {
+    text-align: center;
+    padding: 18px 16px 14px;
+    border-bottom: 1px solid #ABAFB1
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .title h2 {
+    font-size: 24px;
+    line-height: normal;
+    color: #2B2F32
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block {
+    padding: 26px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block {
+    flex: 0 0 auto;
+    width: 416px;
+    border-right: 1px dashed #ABAFB1
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 275px;
+    display: flex;
+    flex-flow: column;
+    height: 430px;
+    justify-content: space-between
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li {
+    flex: 0 0 auto;
+    width: 100%;
+    position: relative;
+    z-index: 1
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    width: 2px;
+    height: 100px;
+    border-right: 1px dashed #ABAFB1;
+    z-index: -1;
+    top: 44px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li:last-child::before {
+    display: none
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li a {
+    display: flex;
+    align-items: center
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li a .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px dashed #ABAFB1;
+    background: #F2F4F5;
+    border-radius: 50%;
+    transition: 0.3s all
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li a .icon .icon_holder {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.3s all
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li a .icon .icon_holder svg path {
+    transition: 0.3s all;
+    stroke: #83898C
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li a:hover .icon {
+    background: #FAF2DE;
+    border: 1px solid var(--frc_primary)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li a:hover .icon .icon_holder {
+    background: transparent
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li a:hover .icon .icon_holder svg path {
+    stroke: var(--frc_primary)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li a:hover .step_info span.capt {
+    color: var(--frc_primary)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li a .step_info {
+    width: calc(100% - 44px);
+    padding-left: 8px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li a .step_info span {
+    display: block
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li a .step_info span.capt {
+    font-size: 14px;
+    line-height: normal;
+    color: #2B2F32;
+    transition: 0.3s all
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li a .step_info span.subcap {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: normal;
+    color: #5E6366
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li.step_done .icon {
+    background: #FAF2DE !important;
+    border: 1px dashed var(--frc_primary) !important
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li.step_done .icon .icon_holder {
+    background: var(--frc_primary) !important
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li.step_done .icon .icon_holder svg path {
+    stroke: #fff !important
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .steps_block ul.steps li.step_done .step_info span.capt {
+    color: var(--frc_primary) !important
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .steps_and_form_block .form_block {
+    width: calc(100% - 416px);
+    flex: 0 0 auto;
+    padding: 0 16px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .upload_csv_form .form_block {
+    width: 100%
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .upload_csv_form .form_block p.upload_csv_note {
+    font-size: 14px;
+    color: #5E6366;
+    line-height: normal;
+    width: 100%;
+    max-width: 495px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner .frc_dashboard_area .main_wrapper .frc_dashboard_main_block .add_new_loan_applicant_block .upload_csv_form .form_block p.upload_csv_note span.highlight {
+    color: var(--frc_primary)
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner.sidepanel_hide .side_panel {
+    width: 56px;
+    overflow-x: hidden
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner.sidepanel_hide .side_panel .frc_brand_block {
+    padding: 16px 12px;
+    width: 56px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner.sidepanel_hide .side_panel .frc_sidebar_menu_list {
+    width: 100%
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner.sidepanel_hide .side_panel .frc_sidebar_menu_list li a span {
+    display: none
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner.sidepanel_hide .frc_dashboard_area {
+    width: calc(100% - 56px);
+    left: 56px
+}
+
+.frc_dashboard_wrapper .dashboard_wrapper_inner.sidepanel_hide .frc_dashboard_area .main_wrapper .frc_topbar {
+    width: calc(100% - 56px)
+}
+
+.frc_modal_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -9;
+    padding: 179px 0;
+    background: rgba(35, 31, 32, 0.5);
+    transition: 0.3s all;
+    opacity: 0
+}
+
+.frc_modal_container .frc_modal_block {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 35px;
+    text-align: center;
+    margin: 0 auto;
+    transition: 0.3s all;
+    transform: scale(0);
+    transform-origin: center
+}
+
+.frc_modal_container .frc_modal_block .modal_close_btn {
+    position: absolute;
+    right: 16px;
+    top: 13px;
+    cursor: pointer
+}
+
+.frc_modal_container .frc_modal_block h4 {
+    font-size: 24px;
+    line-height: normal;
+    margin-bottom: 11px;
+    color: #2b2f32
+}
+
+.frc_modal_container .frc_modal_block p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #2b2f32
+}
+
+.frc_modal_container .frc_modal_block .frc_modal_btn_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 27px;
+    gap: 16px
+}
+
+.frc_modal_container .frc_modal_block .frc_modal_btn_block a {
+    display: block;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 20px;
+    line-height: normal;
+    width: 180px;
+    max-width: 100%
+}
+
+.frc_modal_container .frc_modal_block .frc_modal_btn_block .upload_btn {
+    border: 1px solid #CFD3D4;
+    color: #83898c
+}
+
+.frc_modal_container .frc_modal_block .frc_modal_btn_block .add_new_btn {
+    background: var(--frc_primary);
+    border: 1px solid transparent;
+    color: #fff;
+    transition: 0.3s all
+}
+
+.frc_modal_container .frc_modal_block .frc_modal_btn_block .add_new_btn:hover {
+    background: #fff;
+    border: 1px solid var(--frc_primary);
+    color: var(--frc_primary)
+}
+
+.frc_modal_container.modal_show {
+    z-index: 9;
+    opacity: 1
+}
+
+.frc_modal_container.modal_show .frc_modal_block {
+    transform: scale(1);
+    transition-delay: 0.3s
+}
